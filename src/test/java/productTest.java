@@ -1,5 +1,5 @@
 import Model.ProductBean;
-import api.Helper;
+import api.HelperGetProduct;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ public class productTest {
 
     @Test
     public void getAllProducts() {
-        Helper helper = new Helper();
+        HelperGetProduct helper = new HelperGetProduct();
         res = helper.getResponseAllProduct();
         List<ProductBean> beans = helper.getAllProducts(res);
         System.out.println(beans.toString());
@@ -23,7 +23,7 @@ public class productTest {
 
     @Test
     public void getProducts() {
-        Helper helper = new Helper();
+        HelperGetProduct helper = new HelperGetProduct();
         res = helper.getResponseSingleProduct("138");
         ProductBean beans = helper.getProductDetail(res);
         System.out.println(beans.toString());
