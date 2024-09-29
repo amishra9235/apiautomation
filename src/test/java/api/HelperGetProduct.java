@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class Helper {
+public class HelperGetProduct {
 
     /*
     We read config values
@@ -32,7 +32,7 @@ public class Helper {
     }
 
 
-    public Helper() {
+    public HelperGetProduct() {
         RestAssured.baseURI = BASE_URL;
         RestAssured.useRelaxedHTTPSValidation();
 
